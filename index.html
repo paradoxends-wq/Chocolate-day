@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title></title>
+  <title>85%</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonts -->
@@ -16,148 +16,213 @@
     }
 
     body {
-      background:
-        radial-gradient(circle at 30% 20%, rgba(90,60,40,0.25), transparent 40%),
-        linear-gradient(180deg, #090909 0%, #111 60%, #090909 100%);
-      color: #f4efe9;
-      font-family: 'Inter', sans-serif;
       min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      color: #f4efe9;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(120,80,50,.25), transparent 45%),
+        linear-gradient(180deg, #0a0a0a 0%, #141210 60%, #0a0a0a 100%);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 60px 22px;
+      padding: 60px 20px;
+      overflow-x: hidden;
     }
 
-    .container {
-      max-width: 650px;
+    /* Chocolate texture layer */
+    .texture {
+      position: fixed;
+      inset: 0;
+      background-image: url('chocolate.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.16;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      filter: contrast(1.05) saturate(.9);
+      animation: melt 40s ease-in-out infinite;
+      will-change: transform;
+      z-index: 0;
+    }
+
+    @keyframes melt {
+      0% { transform: scale(1) translateY(0); }
+      50% { transform: scale(1.035) translateY(-10px); }
+      100% { transform: scale(1) translateY(0); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
       width: 100%;
-      animation: fadeIn 1.8s ease;
+      animation: fadeUp 1.2s ease both;
     }
 
     .label {
-      font-size: 0.75rem;
       letter-spacing: 2.5px;
-      color: #b8965f;
-      margin-bottom: 18px;
+      color: #c9a36a;
+      font-size: 0.75rem;
+      margin-bottom: 12px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 500;
-      font-size: 2.7rem;
-      margin-bottom: 10px;
+      font-size: 2.6rem;
+      margin-bottom: 8px;
     }
 
     .sub {
-      font-size: 0.95rem;
-      opacity: 0.65;
-      margin-bottom: 80px;
+      opacity: .65;
       font-style: italic;
+      margin-bottom: 64px;
     }
 
-    .section {
-      margin-bottom: 90px;
+    .step {
+      display: none;
+      animation: fadeUp .9s ease both;
+    }
+    .step.active {
+      display: block;
     }
 
     .text {
       font-family: 'Playfair Display', serif;
-      font-size: 1.45rem;
+      font-size: 1.5rem;
       line-height: 1.7;
+      margin-bottom: 38px;
     }
 
     .text span {
-      opacity: 0.6;
+      opacity: .6;
     }
 
     .divider {
       width: 70px;
       height: 1px;
-      background: rgba(184,150,95,0.35);
-      margin: 90px 0;
+      background: rgba(201,163,106,.45);
+      margin: 56px 0;
     }
 
-    .closing {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      opacity: 0.7;
-      line-height: 1.6;
+    .cta {
+      display: inline-block;
+      padding: 14px 24px;
+      border: 1px solid rgba(201,163,106,.55);
+      background: rgba(0,0,0,.35);
+      color: #f4efe9;
+      letter-spacing: .6px;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+
+    .cta:hover {
+      background: rgba(0,0,0,.55);
+      border-color: rgba(201,163,106,.9);
+      transform: translateY(-1px);
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px dashed rgba(201,163,106,.45);
+      animation: fadeUp 1s ease both;
     }
 
     .signature {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      opacity: 0.55;
+      margin-top: 40px;
+      font-size: .9rem;
+      opacity: .55;
       letter-spacing: 1px;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
+  <div class="texture"></div>
+
+  <main class="card">
     <div class="label">85% CACAO</div>
     <h1>Lindt.</h1>
-    <div class="sub">Because sweetness was never your thing.</div>
+    <div class="sub">Take it slowly.</div>
 
-    <!-- SECTION 1 -->
-    <div class="section">
+    <!-- STEP 1 -->
+    <section class="step active" id="s1">
       <div class="text">
-        Dark chocolate doesn’t try to please.<br>
-        It doesn’t soften itself to be chosen.<br><br>
-        It expects a certain taste.<br>
-        <span>And it knows exactly who has it.</span>
+        Before the first bite,<br>
+        there’s a pause.<br>
+        <span>The quiet crackle. The moment of intent.</span>
       </div>
-    </div>
+      <button class="cta" onclick="nextStep(1)">Unwrap</button>
+    </section>
 
-    <div class="divider"></div>
-
-    <!-- SECTION 2 -->
-    <div class="section">
+    <!-- STEP 2 -->
+    <section class="step" id="s2">
       <div class="text">
-        You always preferred intensity over sugar.<br>
-        Cake only if it was dark.<br>
-        Pastries only if they held depth.<br><br>
-        There’s something unmistakable<br>
-        about people who choose like that.
+        The first bite isn’t sweet.<br>
+        It’s composed.<br>
+        <span>It doesn’t ask to be liked.</span>
       </div>
-    </div>
+      <div class="divider"></div>
+      <button class="cta" onclick="nextStep(2)">First bite</button>
+    </section>
 
-    <div class="divider"></div>
-
-    <!-- SECTION 3 -->
-    <div class="section">
+    <!-- STEP 3 -->
+    <section class="step" id="s3">
       <div class="text">
-        This isn’t sweetness trying to impress you.<br><br>
-        This is desire that stays composed.<br>
-        Slow.<br>
-        Certain.<br>
-        <span>Fully aware of what it wants.</span>
+        The second bite stays longer.<br>
+        Slower.<br>
+        <span>This is where preference becomes choice.</span>
       </div>
-    </div>
+      <div class="divider"></div>
+      <button class="cta" onclick="nextStep(3)">Second bite</button>
+    </section>
 
-    <!-- CLOSING -->
-    <div class="closing">
-      I know what this means to you.<br>
-      And I know you deserve beautiful things.<br><br>
-      Consider this a small token of attention —<br>
-      given with intention.
-    </div>
+    <!-- STEP 4 -->
+    <section class="step" id="s4">
+      <div class="text">
+        Some things don’t need sweetness.<br>
+        They need intention.
+      </div>
+      <button class="cta" onclick="reveal()">Reveal</button>
 
-    <div class="signature">
-      — N
-    </div>
+      <div class="hidden" id="hidden">
+        <div class="text">
+          I know what this means to you.<br>
+          And you deserve beautiful things in this world.<br><br>
+          Just a small token of attention from my side —
+          <span>given with intention.</span>
+        </div>
+        <div class="signature">— N</div>
+      </div>
+    </section>
+  </main>
 
-  </div>
+  <script>
+    function nextStep(n) {
+      document.getElementById('s' + n).classList.remove('active');
+      document.getElementById('s' + (n + 1)).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function reveal() {
+      document.getElementById('hidden').style.display = 'block';
+    }
+
+    // Subtle scroll parallax
+    const texture = document.querySelector('.texture');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      texture.style.transform = `translateY(${y * 0.04}px) scale(1.035)`;
+    });
+  </script>
+
 </body>
 </html>
