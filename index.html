@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dark Chocolate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1b1b1b 0%, #0b0b0b 65%);
+      color: #eae7e3;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 48px 20px;
+    }
+
+    .container {
+      max-width: 760px;
+      width: 100%;
+      animation: fadeIn 1.6s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: 2.5rem;
+      letter-spacing: 0.4px;
+      margin-bottom: 6px;
+    }
+
+    .sub {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      margin-bottom: 72px;
+    }
+
+    .section {
+      margin-bottom: 64px;
+    }
+
+    .percent {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: #b89b5e;
+      margin-bottom: 12px;
+    }
+
+    .text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.28rem;
+      line-height: 1.65;
+      opacity: 0.95;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: rgba(184, 155, 94, 0.4);
+      margin: 72px 0;
+    }
+
+    .aftertaste {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      opacity: 0.65;
+      margin-top: 96px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Title -->
+    <h1>Dark Chocolate</h1>
+    <div class="sub">Some tastes are earned.</div>
+
+    <!-- 85% - Attention -->
+    <div class="section">
+      <div class="percent">85% CACAO</div>
+      <div class="text">
+        Dark chocolate isn’t sweet on purpose.<br>
+        It expects patience.<br><br>
+        I admire that about you.
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Complexity -->
+    <div class="section">
+      <div class="text">
+        Some people reveal themselves quickly.<br>
+        Others unfold.<br><br>
+        You do the second.
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Finish -->
+    <div class="section">
+      <div class="text">
+        The best flavors stay long after the moment ends.<br><br>
+        So do certain people.
+      </div>
+    </div>
+
+    <!-- Aftertaste -->
+    <div class="aftertaste">
+      If you’re ever holding dark chocolate tonight,<br>
+      pause for a second before the first bite.
+    </div>
+
+  </div>
+</body>
+</html>
