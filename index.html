@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -13,31 +16,89 @@
     }
 
     body {
-      background: #0b0b0b;
-      color: #f2f2f2;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      height: 100vh;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(90,60,40,0.25), transparent 40%),
+        linear-gradient(180deg, #090909 0%, #111 60%, #090909 100%);
+      color: #f4efe9;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 40px 24px;
+      align-items: center;
+      padding: 60px 22px;
     }
 
     .container {
-      max-width: 620px;
+      max-width: 650px;
       width: 100%;
+      animation: fadeIn 1.8s ease;
     }
 
-    .line {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 28px;
+    .label {
+      font-size: 0.75rem;
+      letter-spacing: 2.5px;
+      color: #b8965f;
+      margin-bottom: 18px;
     }
 
-    .line.small {
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+    }
+
+    .sub {
       font-size: 0.95rem;
       opacity: 0.65;
-      margin-top: 60px;
+      margin-bottom: 80px;
+      font-style: italic;
+    }
+
+    .section {
+      margin-bottom: 90px;
+    }
+
+    .text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      line-height: 1.7;
+    }
+
+    .text span {
+      opacity: 0.6;
+    }
+
+    .divider {
+      width: 70px;
+      height: 1px;
+      background: rgba(184,150,95,0.35);
+      margin: 90px 0;
+    }
+
+    .closing {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      opacity: 0.7;
+      line-height: 1.6;
+    }
+
+    .signature {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      opacity: 0.55;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -45,35 +106,55 @@
 <body>
   <div class="container">
 
-    <div class="line">
-      I didn’t make this for Valentine’s Day.
+    <div class="label">85% CACAO</div>
+    <h1>Lindt.</h1>
+    <div class="sub">Because sweetness was never your thing.</div>
+
+    <!-- SECTION 1 -->
+    <div class="section">
+      <div class="text">
+        Dark chocolate doesn’t try to please.<br>
+        It doesn’t soften itself to be chosen.<br><br>
+        It expects a certain taste.<br>
+        <span>And it knows exactly who has it.</span>
+      </div>
     </div>
 
-    <div class="line">
-      I made it because you crossed my mind<br>
-      and stayed there longer than you should have.
+    <div class="divider"></div>
+
+    <!-- SECTION 2 -->
+    <div class="section">
+      <div class="text">
+        You always preferred intensity over sugar.<br>
+        Cake only if it was dark.<br>
+        Pastries only if they held depth.<br><br>
+        There’s something unmistakable<br>
+        about people who choose like that.
+      </div>
     </div>
 
-    <div class="line">
-      I’m not trying to impress you.<br>
-      I’m not trying to persuade you.
+    <div class="divider"></div>
+
+    <!-- SECTION 3 -->
+    <div class="section">
+      <div class="text">
+        This isn’t sweetness trying to impress you.<br><br>
+        This is desire that stays composed.<br>
+        Slow.<br>
+        Certain.<br>
+        <span>Fully aware of what it wants.</span>
+      </div>
     </div>
 
-    <div class="line">
-      This is just me being precise about where my attention rests.
+    <!-- CLOSING -->
+    <div class="closing">
+      I know what this means to you.<br>
+      And I know you deserve beautiful things.<br><br>
+      Consider this a small token of attention —<br>
+      given with intention.
     </div>
 
-    <div class="line">
-      Some things aren’t meant to be shared,<br>
-      explained,<br>
-      or softened.
-    </div>
-
-    <div class="line">
-      This is one of them.
-    </div>
-
-    <div class="line small">
+    <div class="signature">
       — N
     </div>
 
