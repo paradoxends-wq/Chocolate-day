@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,73 +16,78 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #1b1b1b 0%, #0b0b0b 65%);
-      color: #eae7e3;
+      background: linear-gradient(180deg, #0b0b0b 0%, #141414 40%, #0b0b0b 100%);
+      color: #f3efe9;
       font-family: 'Inter', sans-serif;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 48px 20px;
+      padding: 60px 22px;
     }
 
     .container {
-      max-width: 760px;
+      max-width: 680px;
       width: 100%;
-      animation: fadeIn 1.6s ease;
+      animation: fadeIn 2s ease;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 500;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       letter-spacing: 0.4px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     .sub {
-      font-size: 0.95rem;
-      opacity: 0.7;
-      margin-bottom: 72px;
+      font-style: italic;
+      opacity: 0.65;
+      margin-bottom: 80px;
     }
 
     .section {
-      margin-bottom: 64px;
+      margin-bottom: 90px;
     }
 
-    .percent {
-      font-size: 0.8rem;
-      letter-spacing: 2px;
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 2.2px;
       color: #b89b5e;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .text {
       font-family: 'Playfair Display', serif;
-      font-size: 1.28rem;
-      line-height: 1.65;
-      opacity: 0.95;
+      font-size: 1.45rem;
+      line-height: 1.7;
+    }
+
+    .text em {
+      font-style: italic;
+      opacity: 0.9;
     }
 
     .divider {
-      width: 60px;
+      width: 80px;
       height: 1px;
-      background: rgba(184, 155, 94, 0.4);
-      margin: 72px 0;
+      background: rgba(184, 155, 94, 0.35);
+      margin: 90px 0;
     }
 
     .aftertaste {
       font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
+      font-style: italic;
+      opacity: 0.6;
+      margin-top: 120px;
       line-height: 1.6;
-      opacity: 0.65;
-      margin-top: 96px;
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(22px);
       }
       to {
         opacity: 1;
@@ -97,43 +102,52 @@
 
     <!-- Title -->
     <h1>Dark Chocolate</h1>
-    <div class="sub">Some tastes are earned.</div>
+    <div class="sub">Not meant to be rushed.</div>
 
-    <!-- 85% - Attention -->
+    <!-- Section 1 -->
     <div class="section">
-      <div class="percent">85% CACAO</div>
+      <div class="label">FIRST BITE</div>
       <div class="text">
-        Dark chocolate isn’t sweet on purpose.<br>
-        It expects patience.<br><br>
-        I admire that about you.
+        It doesn’t try to be sweet.<br>
+        It waits.<br><br>
+        And when it finally melts,<br>
+        it asks you to stay.
       </div>
     </div>
 
     <div class="divider"></div>
 
-    <!-- Complexity -->
+    <!-- Section 2 -->
     <div class="section">
+      <div class="label">THE DEPTH</div>
       <div class="text">
-        Some people reveal themselves quickly.<br>
-        Others unfold.<br><br>
-        You do the second.
+        There’s intensity beneath the surface.<br>
+        Not loud.<br>
+        <em>Controlled.</em><br><br>
+        The kind you feel slowly,<br>
+        long after the moment passes.
       </div>
     </div>
 
     <div class="divider"></div>
 
-    <!-- Finish -->
+    <!-- Section 3 -->
     <div class="section">
+      <div class="label">THE FINISH</div>
       <div class="text">
-        The best flavors stay long after the moment ends.<br><br>
-        So do certain people.
+        The best kind of indulgence<br>
+        doesn’t disappear.<br><br>
+        It lingers.<br>
+        Quietly.<br>
+        Exactly where you felt it first.
       </div>
     </div>
 
     <!-- Aftertaste -->
     <div class="aftertaste">
-      If you’re ever holding dark chocolate tonight,<br>
-      pause for a second before the first bite.
+      If you’re holding dark chocolate tonight,<br>
+      don’t break it yet.<br>
+      Let it warm for a second.
     </div>
 
   </div>
